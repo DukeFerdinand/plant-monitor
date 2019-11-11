@@ -59,7 +59,7 @@
     "switch-default": true,
     "triple-equals": [true, "allow-undefined-check", "allow-null-check"],
     "eofline": false,
-    "indent": [true, "tabs"],
+    "indent": [true, "spaces"],
     "max-line-length": [true, 250],
     "no-require-imports": false,
     "no-trailing-whitespace": true,
@@ -86,7 +86,7 @@
       "check-finally",
       "check-whitespace"
     ],
-    "quotemark": [true, "single", "avoid-escape"],
+    "quotemark": [true, "double"],
     "semicolon": [true, "always"],
     "variable-name": [
       false,

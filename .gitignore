@@ -1,4 +1,6 @@
 /target
 **/*.rs.bk
 
+# JS
 node_modules
+/dist

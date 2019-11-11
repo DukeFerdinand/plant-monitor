@@ -25,9 +25,17 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "@types/feather-icons": "^4.7.0",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.2",
+    "@types/react-transition-group": "^4.2.3",
+    "feather-icons": "^4.24.1",
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
+    "sass-loader": "^8.0.0"
   }
 }
