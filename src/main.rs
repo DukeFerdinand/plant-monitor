@@ -12,6 +12,8 @@ fn main() {
     let catchers = catchers![error_handlers::not_found];
     println!("{:#?}", env::current_dir());
 
+    std::thread::spawn(move || println!("Hello from api thread"));
+
     rocket::ignite()
         .mount("/", routes)
         .register(catchers)

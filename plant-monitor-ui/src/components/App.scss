@@ -1,3 +1,6 @@
+@import "../assets/theme.scss";
+
+// Resets
 html,
 body,
 h1,
@@ -21,18 +24,17 @@ a {
   }
 }
 
+img {
+  width: 100%;
+}
+
+// Globals
+
 * {
   font-family: "Open Sans", sans-serif;
   color: #373d3f;
   box-sizing: border-box;
 }
-
-// Font sizes
-$font-large: 24px;
-$font-medium: 18px;
-$font-small: 14px;
-$font-tiny: 10px;
-$divider-color: #2e313122;
 
 body {
   height: 100vh;
@@ -66,62 +68,13 @@ body {
   align-items: center;
 }
 
+// App
+
 .app-wrapper {
   display: flex;
   height: 100%;
   & > * {
     align-self: stretch;
-  }
-  .app-sidebar {
-    flex: 1;
-    max-width: 300px;
-    background: #f2f1ef;
-
-    .sidebar-divider {
-      width: 100%;
-      border-color: $divider-color;
-      border-bottom: 0;
-      max-width: calc(100% - 75px);
-    }
-
-    .app-title {
-      margin: 15px 0;
-      text-align: center;
-      font-weight: 300;
-      font-size: $font-large;
-    }
-
-    .sidebar-options {
-      margin-top: 35px;
-      list-style: none;
-      font-weight: 300;
-      font-size: $font-medium;
-      text-align: right;
-      padding-left: 0;
-
-      .sidebar-option {
-        cursor: pointer;
-        height: 50px;
-        width: 100%;
-        margin-left: auto;
-        margin-bottom: 10px;
-        max-width: 220px;
-        background: #67809f - 10;
-        border-radius: 5px 0 0 5px;
-        color: white;
-        transition: all 150ms ease-out;
-
-        &:hover,
-        &.is-active {
-          max-width: 250px;
-          background: #67809f + 40;
-        }
-
-        .icon {
-          margin: 0 5px;
-        }
-      }
-    }
   }
 
   .app-content {

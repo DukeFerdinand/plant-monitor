@@ -1,0 +1,73 @@
+@import "../assets/theme.scss";
+
+.app-sidebar {
+  flex: 1;
+  max-width: 300px;
+  background: #f2f1ef;
+
+  display: flex;
+  flex-direction: column;
+
+  .sidebar-divider {
+    width: 100%;
+    border-color: $divider-color;
+    border-bottom: 0;
+    max-width: calc(100% - 75px);
+  }
+
+  .app-title {
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: $font-large;
+  }
+
+  .sidebar-options {
+    margin-top: 35px;
+    list-style: none;
+    font-weight: 300;
+    font-size: $font-medium;
+    text-align: right;
+    padding-left: 0;
+
+    .sidebar-option {
+      cursor: pointer;
+      height: 50px;
+      width: 100%;
+      margin-left: auto;
+      margin-bottom: 10px;
+      max-width: 220px;
+      background: linear-gradient(60deg, #5c97bf - 50, #5c97bf + 10);
+      border-radius: 5px 0 0 5px;
+      color: white;
+      transition: all 150ms ease-out;
+
+      &:hover,
+      &.is-active {
+        max-width: 250px;
+        background: linear-gradient(180deg, #ffffff22, #ffffff00),
+          linear-gradient(60deg, #5c97bf - 50, #5c97bf + 10);
+      }
+
+      .icon {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .sidebar-disclaimers {
+    width: 100%;
+    margin-top: auto;
+
+    font-size: $font-tiny;
+
+    .weather-disclaimer {
+      width: 100%;
+      img {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 200px;
+      }
+    }
+  }
+}

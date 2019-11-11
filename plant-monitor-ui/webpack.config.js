@@ -26,6 +26,32 @@ module.exports = {
           loader: "babel-loader"
         }
       },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        oneOf: [
+          {
+            resourceQuery: /scss/,
+            use: {
+              loader: "svg-url-loader"
+            }
+          },
+          {
+            resourceQuery: /ts/,
+            use: [
+              {
+                loader: "babel-loader"
+              },
+              {
+                loader: "react-svg-loader",
+                options: {
+                  jsx: true // true outputs JSX tags
+                }
+              }
+            ]
+          }
+        ]
+      },
 
       // css-loader to bundle all the css files into one file and style-loader to add all the styles  inside the style tag of the document
       {

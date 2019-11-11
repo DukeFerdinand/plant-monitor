@@ -3,6 +3,8 @@ import { Icon } from "./Icon";
 import { NavLink } from "react-router-dom";
 import icons, { Icons } from "../assets/icons";
 
+import "./Sidebar.scss";
+
 const appTitle = "Plant Monitor";
 
 interface ILink {
@@ -18,13 +20,13 @@ const links: ILink[] = [
     iconName: "home"
   },
   {
-    to: "/manage",
-    text: "Manage",
-    iconName: "alert"
-  },
-  {
     to: "/weather",
     text: "Weather",
+    iconName: "cloud-drizzle"
+  },
+  {
+    to: "/manage",
+    text: "Manage",
     iconName: "alert"
   }
 ];
@@ -50,6 +52,16 @@ export const Sidebar = () => {
             {link.text}
           </NavLink>
         ))}
+      </div>
+      <div className="sidebar-disclaimers">
+        <div className="weather-disclaimer">
+          <a href="https://darksky.net/">
+            <img
+              src="https://darksky.net/dev/img/attribution/poweredby-oneline.png"
+              alt="Dark Sky logo"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
