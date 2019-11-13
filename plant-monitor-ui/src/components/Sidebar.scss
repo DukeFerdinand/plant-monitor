@@ -3,7 +3,7 @@
 .app-sidebar {
   flex: 1;
   max-width: 300px;
-  background: #f2f1ef;
+  background: #fff;
 
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
       margin-left: auto;
       margin-bottom: 10px;
       max-width: 220px;
-      background: linear-gradient(60deg, #5c97bf - 50, #5c97bf + 10);
+      background: linear-gradient(60deg, #049372 - 10, #049372 + 10);
       border-radius: 5px 0 0 5px;
       color: white;
       transition: all 150ms ease-out;
@@ -45,8 +45,24 @@
       &:hover,
       &.is-active {
         max-width: 250px;
-        background: linear-gradient(180deg, #ffffff22, #ffffff00),
-          linear-gradient(60deg, #5c97bf - 50, #5c97bf + 10);
+      }
+
+      &.green {
+        background: #049372;
+        background: $background-hex,
+          linear-gradient(60deg, #049372 - 10, #049372 + 10);
+      }
+
+      &.blue {
+        // background: #5c97bf;
+        background: $background-hex,
+          linear-gradient(60deg, #5c97bf - 10, #5c97bf + 10);
+      }
+
+      &.red {
+        // background: #d64541;
+        background: $background-hex,
+          linear-gradient(60deg, #d64541 - 10, #d64541 + 10);
       }
 
       .icon {

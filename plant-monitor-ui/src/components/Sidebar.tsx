@@ -10,24 +10,28 @@ const appTitle = "Plant Monitor";
 interface ILink {
   to: string;
   text: string;
+  className: "green" | "blue" | "red";
   iconName?: keyof Icons;
 }
 
 const links: ILink[] = [
   {
     to: "/",
-    text: "Home",
-    iconName: "home"
+    text: "Plants",
+    iconName: "activity",
+    className: "green"
   },
   {
     to: "/weather",
     text: "Weather",
-    iconName: "cloud-drizzle"
+    iconName: "cloud-drizzle",
+    className: "blue"
   },
   {
     to: "/manage",
     text: "Manage",
-    iconName: "alert"
+    iconName: "alert",
+    className: "red"
   }
 ];
 
@@ -43,7 +47,7 @@ export const Sidebar = () => {
             key={`key-${link.to}`}
             activeClassName="is-active"
             to={link.to}
-            className="sidebar-option valign-center"
+            className={`sidebar-option valign-center ${link.className}`}
           >
             <Icon
               iconName={link.iconName ? link.iconName : "alert"}

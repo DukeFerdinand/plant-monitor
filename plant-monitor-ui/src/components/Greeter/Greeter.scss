@@ -1,0 +1,26 @@
+@import "../../assets/theme.scss";
+
+.greeter {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  font-size: $font-hero;
+
+  display: flex;
+
+  &.morning {
+    background: linear-gradient(-45deg, #ffffff22, #ffffff00),
+      linear-gradient(60deg, #ec644b, #fefad4);
+  }
+
+  &.evening {
+    background: $evening;
+  }
+
+  .greeter-message {
+    margin: auto;
+    font-weight: 300;
+    color: white !important;
+  }
+}
