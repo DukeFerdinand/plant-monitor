@@ -1,0 +1,29 @@
+[development]
+address = "0.0.0.0" # So we can access form network
+port = 8000
+workers = 4
+keep_alive = 5
+log = "normal"
+# secret_key = [randomly generated at launch]
+limits = { forms = 32768 }
+mongo_user = ""
+mongo_pass = ""
+dark_sky_key= ""
+
+# [staging]
+# address = "0.0.0.0"
+# port = 8000
+# workers = [number of cpus * 2]
+# keep_alive = 5
+# log = "normal"
+# secret_key = [randomly generated at launch]
+# limits = { forms = 32768 }
+
+# [production]
+# address = "0.0.0.0"
+# port = 8000
+# workers = [number of cpus * 2]
+# keep_alive = 5
+# log = "critical"
+# secret_key = [randomly generated at launch]
+# limits = { forms = 32768 }
